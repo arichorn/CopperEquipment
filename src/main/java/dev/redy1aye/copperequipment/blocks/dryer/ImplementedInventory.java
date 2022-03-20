@@ -1,4 +1,4 @@
-package dev.redy1aye.copperequipment.misc;
+package dev.redy1aye.copperequipment.blocks.dryer;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
