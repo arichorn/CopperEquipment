@@ -1,0 +1,50 @@
+{
+  "parent": "copperequipment:copper_shield",
+  "display": {
+    "icon": {
+      "item": "copperequipment:copper_shield"
+    },
+    "title": {
+      "translate": "advancements.story.copper_shield.title"
+    },
+    "description": {
+      "translate": "advancements.story.copper_shield.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "copper_shield": {
+      "trigger": "minecraft:shield_crouch",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "copperequipment:copper_shield"
+            ]
+          }
+        ]
+      }
+    },
+    "waxed_copper_shield": {
+      "trigger": "minecraft:shield_crouch",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "copperequipment:waxed_copper_shield"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "copper_shield",
+      "waxed_copper_shield"
+    ]
+  ]
+}
