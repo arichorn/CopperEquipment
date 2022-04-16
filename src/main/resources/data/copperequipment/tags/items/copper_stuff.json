@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "copperequipment:copper_sword",
+	"copperequipment:copper_shield",
     "copperequipment:copper_shovel",
     "copperequipment:copper_pickaxe",
     "copperequipment:copper_axe",
