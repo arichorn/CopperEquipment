@@ -1,6 +1,5 @@
 package dev.redy1aye.copperequipment;
 
-import dev.redy1aye.copperequipment.blocks.dryer.DryerScreen;
 import dev.redy1aye.copperequipment.misc.LootSpawn;
 
 import net.fabricmc.api.ModInitializer;

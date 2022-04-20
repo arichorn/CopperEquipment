@@ -3,15 +3,6 @@ package dev.redy1aye.copperequipment;
 import dev.redy1aye.copperequipment.armor.CopperArmor;
 import dev.redy1aye.copperequipment.armor.WaxedCopperArmor;
 import dev.redy1aye.copperequipment.blocks.Buttons;
-import dev.redy1aye.copperequipment.blocks.dryer.DrayerScreenHandler;
-import dev.redy1aye.copperequipment.blocks.dryer.Dryer;
-import dev.redy1aye.copperequipment.blocks.PreasurePlates;
-import dev.redy1aye.copperequipment.blocks.dryer.DryerBlockEntity;
-import dev.redy1aye.copperequipment.blocks.dryer.DryerRecipes;
-import dev.redy1aye.copperequipment.events.christmas.SnowyCopperArmor;
-import dev.redy1aye.copperequipment.events.christmas.XmasCandyCane;
-import dev.redy1aye.copperequipment.events.christmas.XmasCookie;
-import dev.redy1aye.copperequipment.events.skins.CandySwordSkin;
 import dev.redy1aye.copperequipment.tools.CopperTools;
 import dev.redy1aye.copperequipment.tools.WaxedCopperTools;
 
@@ -90,27 +81,7 @@ public class Items {
 
     public static final Block COPPER_BUTTON = new Buttons
             (FabricBlockSettings.of(Material.METAL).strength(0.5f, 0.5f).sounds(BlockSoundGroup.COPPER).collidable(false));
-    public static final Block COPPER_PRESSURE_PLATE = new PreasurePlates
-            (PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.METAL).strength(0.5f, 0.5f).requiresTool().sounds(BlockSoundGroup.COPPER).collidable(false));
 
-    public static BlockEntityType<DryerBlockEntity> DRYER_BLOCK_ENTITY;
-    public static final Block DRYER = new Dryer
-            (FabricBlockSettings.of(Material.METAL).strength(0.9f, 0.9f).sounds(BlockSoundGroup.NETHERITE).nonOpaque());
-    public static ScreenHandlerType<DrayerScreenHandler> DRYER_SCREEN_HANDLER =
-            ScreenHandlerRegistry.registerSimple(new Identifier(Mod.MOD_ID, "dryer"),
-                    DrayerScreenHandler::new);
-
-    public static final Item XMAS_COOKIE = new XmasCookie(new FabricItemSettings().rarity(Rarity.EPIC)
-            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1F).statusEffect(new StatusEffectInstance(StatusEffects.LUCK, 1200), 0.95f).build()));
-    public static final Item XMAS_CANDY_CANE = new XmasCandyCane(new FabricItemSettings().rarity(Rarity.EPIC)
-            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1F).statusEffect(new StatusEffectInstance(StatusEffects.LUCK, 1200), 0.95f).build()));
-
-    public static final Item SKIN_SNOWY = new SnowySkin(new FabricItemSettings());
-    public static final ArmorItem SNOWY_COPPER_HELMET = new ArmorItem(SnowyCopperArmor.SNOWY_COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().rarity(Rarity.UNCOMMON));
-    public static final ArmorItem SNOWY_COPPER_CHESTPLATE = new ArmorItem(SnowyCopperArmor.SNOWY_COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().rarity(Rarity.UNCOMMON));
-    public static final ArmorItem SNOWY_COPPER_BOOTS = new ArmorItem(SnowyCopperArmor.SNOWY_COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings().rarity(Rarity.UNCOMMON));
-
-    public static final Item SKIN_CANDY_SWORD = new CandySwordSkin(new FabricItemSettings());
     public static final ToolItem CANDY_NETHERITE_SWORD = new SwordItem(ToolMaterials.NETHERITE, 3, -2.4F, new Item.Settings().fireproof().rarity(Rarity.EPIC));
     public static final ToolItem CANDY_DIAMOND_SWORD = new SwordItem(ToolMaterials.DIAMOND, 3, -2.4F, new Item.Settings().rarity(Rarity.RARE));
     public static final ToolItem CANDY_COPPER_SWORD = new SwordItem(CopperTools.COPPER_TOOL, CopperSwordDamage, CopperSwordAttackSpeed, new Item.Settings().rarity(Rarity.UNCOMMON));
@@ -151,38 +122,16 @@ public class Items {
         // Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "copper_shears"), COPPER_SHEARS);
         Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "copper_horse_armor"), COPPER_HORSE_ARMOR);
 
-        DRYER_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "copperequipment:dryer",
-                FabricBlockEntityTypeBuilder.create(DryerBlockEntity::new, DRYER).build(null));
-
-        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(Mod.MOD_ID, DryerRecipes.Serializer.ID),
-                DryerRecipes.Serializer.INSTANCE);
-        Registry.register(Registry.RECIPE_TYPE, new Identifier(Mod.MOD_ID, DryerRecipes.Type.ID),
-                DryerRecipes.Type.INSTANCE);
 
         if(EnableButtons) {
-        Registry.register(Registry.BLOCK, new Identifier(Mod.MOD_ID, "copper_pressure_plate"), COPPER_PRESSURE_PLATE);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "copper_pressure_plate"),
-                new BlockItem(COPPER_PRESSURE_PLATE, new FabricItemSettings().group(Items.TAB_COPPER)));
 
         Registry.register(Registry.BLOCK, new Identifier(Mod.MOD_ID, "copper_button"), COPPER_BUTTON);
         Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "copper_button"),
                 new BlockItem(COPPER_BUTTON, new FabricItemSettings().group(Items.TAB_COPPER))); }
 
 
-        Registry.register(Registry.BLOCK, new Identifier(Mod.MOD_ID, "dryer"), DRYER);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "dryer"),
-                new BlockItem(DRYER, new FabricItemSettings()/*.group(Items.TAB_COPPER)*/));
 
 
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "xmas_cookie"), XMAS_COOKIE);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "xmas_candy_cane"), XMAS_CANDY_CANE);
-
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "snowy_skin"), SKIN_SNOWY);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "snowy_copper_helmet"), SNOWY_COPPER_HELMET);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "snowy_copper_chestplate"), SNOWY_COPPER_CHESTPLATE);
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "snowy_copper_boots"), SNOWY_COPPER_BOOTS);
-
-        Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "candy_sword_skin"), SKIN_CANDY_SWORD);
         Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "candy_netherite_sword"), CANDY_NETHERITE_SWORD);
         Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "candy_diamond_sword"), CANDY_DIAMOND_SWORD);
         Registry.register(Registry.ITEM, new Identifier(Mod.MOD_ID, "candy_copper_sword"), CANDY_COPPER_SWORD);
