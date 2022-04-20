@@ -10,3 +10,5 @@
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/copper-equipment-fabric) [Modrinth](https://modrinth.com/mod/copper-equipment) [Planet Minecraft](https://www.planetminecraft.com/mod/copper-equipment/)
 
 # Developer Version: This is not a official version of copper equipment, this will have unoffical dev previews by me.
+22w16b or Newer: having issues with fabric loom?
+simply use the following command 'gradlew --refresh-dependencies' to force update the dependencies
