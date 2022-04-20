@@ -12,7 +12,6 @@ import dev.redy1aye.copperequipment.events.christmas.SnowyCopperArmor;
 import dev.redy1aye.copperequipment.events.christmas.XmasCandyCane;
 import dev.redy1aye.copperequipment.events.christmas.XmasCookie;
 import dev.redy1aye.copperequipment.events.skins.CandySwordSkin;
-import dev.redy1aye.copperequipment.events.skins.SnowySkin;
 import dev.redy1aye.copperequipment.tools.CopperTools;
 import dev.redy1aye.copperequipment.tools.WaxedCopperTools;
 
