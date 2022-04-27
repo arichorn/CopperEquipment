@@ -21,7 +21,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.TranslatableTextContent;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
@@ -62,7 +62,7 @@ public class DryerBlockEntity extends net.minecraft.block.entity.BlockEntity imp
 
     @Override
     public Text getDisplayName() {
-        return new TranslatableText("block.copperequipment.dryer");
+        return Text.translatable("block.copperequipment.dryer");
     }
 
     @Nullable
