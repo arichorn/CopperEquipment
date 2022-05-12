@@ -1,37 +1,40 @@
 {
-  "schemaVersion": 1,
-  "id": "copperequipment",
-  "version": "1.8.3",
-
-  "name": "Copper Equipment",
-  "description": "Enjoy your copper armor and tools!",
-  "authors": [
-    "Redy1aye"
-  ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/copper-equipment-fabric",
-    "sources": "https://github.com/Redy1aye/CopperEquipment",
-    "issues": "https://github.com/Redy1aye/CopperEquipment/issues"
-  },
-
-  "license": "MIT",
-  "icon": "assets/copperequipment/copperequipment-fabric-logo.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "dev.redy1aye.copperequipment.Mod"
-    ]
-  },
-
-  "mixins": [
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.12.5",
-    "fabric": "*",
-    "minecraft": ">=1.18",
-    "java": ">=17",
-    "cloth-config2": "*"
-  }
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "dev.redy1aye",
+		"id": "copperequipment",
+		"version": "1.8.5-Dev",
+		"metadata": {
+			"name": "Copper Equipment",
+			"description": "Enjoy your copper armor and copper loot!",
+			"contributors": {
+				"Me!": "Redy1aye"
+			},
+			"contact": {
+				"homepage": "https://www.curseforge.com/minecraft/mc-mods/copper-equipment-fabric",
+				"issues": "https://github.com/Redy1aye/CopperEquipment/issues",
+				"sources": "https://github.com/Redy1aye/CopperEquipment"
+			},
+			"icon": "assets/copperequipment/copperequipment-fabric-logo.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "dev.redy1aye.copperequipment.Mod"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.16.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=1.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.18.2"
+			}
+		]
+	},
+	"mixin": "mod.mixins.json"
 }
