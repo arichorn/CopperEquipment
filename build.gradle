@@ -37,7 +37,6 @@ dependencies {
 	
 	// Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:7.0.61") {
-		exclude(group: "net.fabricmc.fabric-api")
 }
 
 processResources {
