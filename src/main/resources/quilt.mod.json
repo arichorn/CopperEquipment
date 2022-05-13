@@ -35,6 +35,4 @@
 				"versions": ">=1.18.2"
 			}
 		]
-	},
-	"mixin": "mod.mixins.json"
-}
+	}
