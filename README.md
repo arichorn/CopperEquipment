@@ -11,4 +11,4 @@
 
 # Developer Version: This is not a official version of copper equipment, this will have unoffical dev previews by me.
 
-# Recommended Dev Versions: I recommend using Copper Equipment 1.8.4.1 22w14a or newer, since they are supported by the original Developer of the following mod.
+# Recommended Dev Versions: I recommend using Copper Equipment 1.8.5 22w17a or newer, since they are supported by the original Developer of the following mod.
