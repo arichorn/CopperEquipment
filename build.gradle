@@ -33,6 +33,7 @@ dependencies {
 
 	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 	
 	// Fabric-ASM
 	modImplementation "com.github.Chocohead:Fabric-ASM:${project.fabric_asm_version}"
