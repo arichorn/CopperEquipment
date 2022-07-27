@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "copperequipment",
-  "version": "1.8.5-Dev",
+  "version": "1.8.5.1",
 
   "name": "Copper Equipment",
   "description": "Enjoy your copper armor and copper loot!",
@@ -28,9 +28,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.8",
     "fabric": "*",
-    "minecraft": ">=1.19",
+    "minecraft": ">=1.19.1",
     "java": ">=17",
     "cloth-config2": "*"
   }
