@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -40,7 +40,7 @@ dependencies {
 	include "com.github.Chocohead:Fabric-ASM:${project.fabric_asm_version}"
 
 	// Cloth Config
-	modApi("me.shedaniel.cloth:cloth-config-fabric:7.0.72") {
+	modApi("me.shedaniel.cloth:cloth-config-fabric:8.2.88") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 }
