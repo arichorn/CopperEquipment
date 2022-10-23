@@ -16,7 +16,7 @@ import dev.redy1aye.copperequipment.events.skins.SnowySkin;
 import dev.redy1aye.copperequipment.tools.CopperTools;
 import dev.redy1aye.copperequipment.tools.WaxedCopperTools;
 
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
@@ -58,35 +58,35 @@ public class Items {
             () -> new ItemStack(Items.COMPRESSED_COPPER));
 
     public static final Item COMPRESSED_COPPER = new Item(new FabricItemSettings().group(Items.TAB_COPPER));
-        public static final Item COMPRESSED_WAXED_COPPER = new Item(new FabricItemSettings().group(Items.TAB_COPPER));
+        public static final Item COMPRESSED_WAXED_COPPER = new Item(new FabricItemSettings());
 
-    public static final Item COPPER_NUGGET = new Item(new FabricItemSettings().group(Items.TAB_COPPER));
-        public static final Item WAXED_COPPER_NUGGET = new Item(new FabricItemSettings().group(Items.TAB_COPPER));
+    public static final Item COPPER_NUGGET = new Item(new FabricItemSettings());
+        public static final Item WAXED_COPPER_NUGGET = new Item(new FabricItemSettings());
 
 
-    public static final ToolItem COPPER_SWORD = new SwordItem(CopperTools.COPPER_TOOL, CopperSwordDamage, CopperSwordAttackSpeed, new Item.Settings().group(Items.TAB_COPPER));
-    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperTools.COPPER_TOOL, 4.5f, -2.9f, new Item.Settings().group(Items.TAB_COPPER));
-    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperTools.COPPER_TOOL, 4, -2.7f, new Item.Settings().group(Items.TAB_COPPER)) {};
-    public static final ToolItem COPPER_AXE = new AxeItem(CopperTools.COPPER_TOOL, CopperAxeDamage, CopperAxeAttackSpeed, new Item.Settings().group(Items.TAB_COPPER)) {};
-    public static final ToolItem COPPER_HOE = new HoeItem(CopperTools.COPPER_TOOL, 1, -0.9f, new Item.Settings().group(Items.TAB_COPPER)) {};
+    public static final ToolItem COPPER_SWORD = new SwordItem(CopperTools.COPPER_TOOL, CopperSwordDamage, CopperSwordAttackSpeed, new Item.Settings());
+    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperTools.COPPER_TOOL, 4.5f, -2.9f, new Item.Settings());
+    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperTools.COPPER_TOOL, 4, -2.7f, new Item.Settings());
+    public static final ToolItem COPPER_AXE = new AxeItem(CopperTools.COPPER_TOOL, CopperAxeDamage, CopperAxeAttackSpeed, new Item.Settings());
+    public static final ToolItem COPPER_HOE = new HoeItem(CopperTools.COPPER_TOOL, 1, -0.9f, new Item.Settings());
     // public static final ShearsItem COPPER_SHEARS = new ShearsItem(new Item.Settings().maxDamage(CopperToolsDurability).group(Items.TAB_COPPER));
 
-    public static final ArmorItem COPPER_HELMET = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().group(Items.TAB_COPPER));
-    public static final ArmorItem COPPER_CHESTPLATE = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().group(Items.TAB_COPPER));
-    public static final ArmorItem COPPER_LEGGINGS = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings().group(Items.TAB_COPPER));
-    public static final ArmorItem COPPER_BOOTS = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings().group(Items.TAB_COPPER));
-    public static final HorseArmorItem COPPER_HORSE_ARMOR = new HorseArmorItem(6, "copper", new FabricItemSettings().maxCount(1).group(Items.TAB_COPPER));
+    public static final ArmorItem COPPER_HELMET = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings());
+    public static final ArmorItem COPPER_CHESTPLATE = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings());
+    public static final ArmorItem COPPER_LEGGINGS = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings());
+    public static final ArmorItem COPPER_BOOTS = new ArmorItem(CopperArmor.COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings());
+    public static final HorseArmorItem COPPER_HORSE_ARMOR = new HorseArmorItem(6, "copper", new FabricItemSettings().maxCount(1));
 
-        public static final ToolItem WAXED_COPPER_SWORD = new SwordItem(WaxedCopperTools.WAXED_COPPER_TOOL, WaxedCopperSwordDamage, WaxedCopperSwordAttackSpeed, new Item.Settings().group(Items.TAB_COPPER));
-        public static final ToolItem WAXED_COPPER_SHOVEL = new ShovelItem(WaxedCopperTools.WAXED_COPPER_TOOL, 4.5f, -3.1f, new Item.Settings().group(Items.TAB_COPPER));
-        public static final ToolItem WAXED_COPPER_PICKAXE = new PickaxeItem(WaxedCopperTools.WAXED_COPPER_TOOL, 4, -2.9f, new Item.Settings().group(Items.TAB_COPPER)) {};
-        public static final ToolItem WAXED_COPPER_AXE = new AxeItem(WaxedCopperTools.WAXED_COPPER_TOOL, WaxedCopperAxeDamage, WaxedCopperAxeAttackSpeed, new Item.Settings().group(Items.TAB_COPPER)) {};
-        public static final ToolItem WAXED_COPPER_HOE = new HoeItem(WaxedCopperTools.WAXED_COPPER_TOOL, 1, -1.1f, new Item.Settings().group(Items.TAB_COPPER)) {};
+        public static final ToolItem WAXED_COPPER_SWORD = new SwordItem(WaxedCopperTools.WAXED_COPPER_TOOL, WaxedCopperSwordDamage, WaxedCopperSwordAttackSpeed, new Item.Settings());
+        public static final ToolItem WAXED_COPPER_SHOVEL = new ShovelItem(WaxedCopperTools.WAXED_COPPER_TOOL, 4.5f, -3.1f, new Item.Settings());
+        public static final ToolItem WAXED_COPPER_PICKAXE = new PickaxeItem(WaxedCopperTools.WAXED_COPPER_TOOL, 4, -2.9f, new Item.Settings());
+        public static final ToolItem WAXED_COPPER_AXE = new AxeItem(WaxedCopperTools.WAXED_COPPER_TOOL, WaxedCopperAxeDamage, WaxedCopperAxeAttackSpeed, new Item.Settings());
+        public static final ToolItem WAXED_COPPER_HOE = new HoeItem(WaxedCopperTools.WAXED_COPPER_TOOL, 1, -1.1f, new Item.Settings());
 
-        public static final ArmorItem WAXED_COPPER_HELMET = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().group(Items.TAB_COPPER));
-        public static final ArmorItem WAXED_COPPER_CHESTPLATE = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().group(Items.TAB_COPPER));
-        public static final ArmorItem WAXED_COPPER_LEGGINGS = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings().group(Items.TAB_COPPER));
-        public static final ArmorItem WAXED_COPPER_BOOTS = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings().group(Items.TAB_COPPER));
+        public static final ArmorItem WAXED_COPPER_HELMET = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings());
+        public static final ArmorItem WAXED_COPPER_CHESTPLATE = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings());
+        public static final ArmorItem WAXED_COPPER_LEGGINGS = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings());
+        public static final ArmorItem WAXED_COPPER_BOOTS = new ArmorItem(WaxedCopperArmor.WAXED_COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings());
 
 
     public static final Block COPPER_BUTTON = new Buttons
