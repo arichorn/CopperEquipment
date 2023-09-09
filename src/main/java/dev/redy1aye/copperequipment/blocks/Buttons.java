@@ -6,9 +6,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class Buttons extends AbstractButtonBlock {
-    public Buttons(Settings settings) {
-        super(false, settings);
+public class ButtonBlock extends AbstractButtonBlock {
+    public ButtonBlock(Settings settings) {
+        super(settings);
     }
 
     @Override
