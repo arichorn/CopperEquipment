@@ -1,12 +1,12 @@
 package dev.redy1aye.copperequipment.blocks;
 
-import net.minecraft.block.AbstractButtonBlock;
+import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class Buttons extends AbstractButtonBlock {
+public class Buttons extends ButtonBlock {
     public Buttons(Settings settings) {
         super(false, settings);
     }
